@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Java script calculator</title>
+  </head>
+  <body>
+
+    <div class="container w-75 bg-primary p-5 " >
+        <div class="row">
+            <div class="numbers col-md-6 pt-4">
+
+              <div class="form-group">
+              <input type="number" class="form-control" placeholder="Type first Number" id="num1" name="number">
+              </div>
+
+              <div class="form-group">
+              <input type="number" class="form-control" placeholder="Type  last Number" id="num2" name="number2">
+              </div>
+
+
+            </div>
+
+            <!-- Number section end here -->
+
+            <div class="operators col-md-2">
+              
+                <ul class="list-group">
+                  <li class="list-group-item text-center "><button type="button" class="fas fa-plus btn font-weight-bold" onclick="pluse()"></i></button>
+
+                  <li class="list-group-item text-center "><button class="fas fa-minus btn font-weight-bold" onclick="minus()" ></i></button>
+
+                  <li class="list-group-item text-center "><button class="fas fa-times btn font-weight-bold" onclick="multifly()"></i></button>
+
+                  <li class="list-group-item text-center "><button class="fas fa-divide btn font-weight-bold" onclick=" divided()"></i></button>
+
+
+
+                  
+                </ul>
+              
+            </div>
+
+            <div class="col-md-4">
+                <h2 class="text-center text-white">Result</h2>
+
+                <div class=" bg-white h-25 rounded text-center" id="show" >
+                  
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <script>
+
+     
+     
+
+      
+     // var show = document.querySelector("#show");
+      
+
+      function pluse(){
+        var num1 = document.getElementById("num1").value;
+        var num2 = document.querySelector("#num2").value;
+        if (!num1 || !num2) {
+          alert("Please input two field")
+        }else{
+          num1 = parseFloat(num1)
+          num2 = parseFloat(num2)
+
+           var addition = num1+num2;
+        document.getElementById('show').innerText = num1+'+'+num2 +'='+ addition;
+
+        }    
+      }
+
+
+        function minus(){
+        var num1 = document.getElementById("num1").value;
+        var num2 = document.querySelector("#num2").value;
+        if (!num1 || !num2) {
+          alert("Please input two field")
+        }else{
+          num1 = parseFloat(num1)
+          num2 = parseFloat(num2)
+
+           var minus = num1-num2;
+        document.getElementById('show').innerText = num1+'-'+num2 +'='+ minus;
+
+        }    
+      }
+
+
+        function multifly(){
+        var num1 = document.getElementById("num1").value;
+        var num2 = document.querySelector("#num2").value;
+        if (!num1 || !num2) {
+          alert("Please input two field")
+        }else{
+          num1 = parseFloat(num1)
+          num2 = parseFloat(num2)
+
+           var multi = num1*num2;
+        document.getElementById('show').innerText = num1+'*'+num2 +'='+ multi;
+
+        }    
+      }
+
+        function divided(){
+        var num1 = document.getElementById("num1").value;
+        var num2 = document.querySelector("#num2").value;
+        if (!num1 || !num2) {
+          alert("Please input two field")
+        }else{
+          num1 = parseFloat(num1)
+          num2 = parseFloat(num2)
+
+           var divi = num1/num2;
+        document.getElementById('show').innerText = num1+'/'+num2 +'='+ divi;
+
+        }    
+      }
+
+
+
+
+     
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script> -->
+
+ 
+  </body>
+</html>
